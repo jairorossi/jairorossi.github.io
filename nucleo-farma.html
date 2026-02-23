@@ -1,28 +1,202 @@
-<div class="grid">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Núcleo Farma | Projetos Jairo Rossi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg: #0b0e14;
+            --surface: #151921;
+            --border: #242933;
+            --accent: #10b981; /* Verde Esmeralda (Estilo Solar Monitor) */
+            --text-main: #ffffff;
+            --text-secondary: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            transition: opacity 0.3s;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            opacity: 0.7;
+        }
+
+        header {
+            margin-bottom: 50px;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .description {
+            color: var(--text-secondary);
+            max-width: 650px;
+            font-size: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 32px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.08);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .card-icon i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .btn-access {
+            background: #1e293b;
+            color: var(--text-main);
+            text-align: center;
+            padding: 12px;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .card:hover .btn-access {
+            background: var(--accent);
+            color: var(--bg);
+            border-color: var(--accent);
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Voltar ao Painel Geral
+        </a>
+
+        <header>
+            <h1>Projetos Núcleo Farma</h1>
+            <p class="description">Ecossistema de ferramentas inteligentes para automação fiscal, consulta de dados e visualização de arquivos XML.</p>
+        </header>
+
+        <div class="grid">
             <a href="https://impostoapagar-7ysgz4axs4kgevjz4cb35k.streamlit.app/" target="_blank" class="card">
                 <div>
-                    <i class="fas fa-calculator"></i>
+                    <div class="card-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
                     <h3>Consulta Imposto SPED</h3>
-                    <p>Ferramenta para análise e consulta de impostos a pagar baseada em arquivos SPED.</p>
+                    <p>Análise automatizada de impostos a pagar através do processamento de arquivos SPED.</p>
                 </div>
                 <div class="btn-access">Abrir Ferramenta</div>
             </a>
 
             <a href="https://validador-gcom-yrfers4mjlhgbum7thgaew.streamlit.app/" target="_blank" class="card">
                 <div>
-                    <i class="fas fa-search-location"></i>
+                    <div class="card-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
                     <h3>Consulta CNPJ | Fiscal</h3>
-                    <p>Validador G-COM para consultas fiscais e verificação de dados de CNPJ.</p>
+                    <p>Validação de dados cadastrais e fiscais via G-COM para consultas rápidas.</p>
                 </div>
                 <div class="btn-access">Consultar Agora</div>
             </a>
 
             <a href="https://visualizador-nfe-hjd3h6xhtopjsg9o2vihpp.streamlit.app/" target="_blank" class="card">
                 <div>
-                    <i class="fas fa-file-code"></i>
+                    <div class="card-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
                     <h3>Visualizador de XML</h3>
-                    <p>Interface intuitiva para visualização e conferência de arquivos XML de Notas Fiscais.</p>
+                    <p>Leitor de Notas Fiscais eletrônicas com interface simplificada para conferência.</p>
                 </div>
                 <div class="btn-access">Visualizar Arquivo</div>
             </a>
         </div>
+    </div>
+
+</body>
+</html>
