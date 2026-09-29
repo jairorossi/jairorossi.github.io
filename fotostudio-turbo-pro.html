@@ -165,6 +165,90 @@
 
         .pill i { color: var(--accent); }
 
+        /* Showcase Mockup Frame */
+        .showcase-card {
+            background: #0f131d;
+            border: 1px solid rgba(0, 212, 255, 0.35);
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 44px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 212, 255, 0.12);
+        }
+
+        .showcase-header {
+            background: #151a26;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .window-title {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.3px;
+        }
+
+        .window-badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            padding: 3px 10px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .showcase-img-wrap {
+            padding: 12px;
+            background: #090c12;
+            display: flex;
+            justify-content: center;
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: auto;
+            border-radius: 14px;
+            display: block;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.4s ease;
+        }
+
+        .showcase-caption {
+            padding: 16px 24px;
+            background: #111622;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .showcase-caption i {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
         /* Section Titles */
         .section-title {
             font-size: 1.45rem;
@@ -292,7 +376,7 @@
 
         .steps-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
             margin-top: 20px;
         }
@@ -453,6 +537,26 @@
                 <span class="pill"><i class="fas fa-lock"></i> 100% Offline & Seguro</span>
                 <span class="pill"><i class="fas fa-key"></i> Licenciamento HMAC-SHA256</span>
                 <span class="pill"><i class="fas fa-desktop"></i> Interface Escura Moderna</span>
+            </div>
+        </div>
+
+        <!-- App Showcase Mockup Frame -->
+        <div class="showcase-card">
+            <div class="showcase-header">
+                <div class="window-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                </div>
+                <div class="window-title"><i class="fas fa-bolt" style="color: var(--accent); margin-right: 6px;"></i> FotoStudio Turbo PRO - Interface Oficial v1.0</div>
+                <div class="window-badge"><i class="fas fa-check-circle"></i> Licença Ativa</div>
+            </div>
+            <div class="showcase-img-wrap">
+                <img src="assets/fotostudio-ui.png" alt="Interface Oficial FotoStudio Turbo PRO" class="showcase-img">
+            </div>
+            <div class="showcase-caption">
+                <i class="fas fa-sliders-h"></i>
+                <span><strong>Interface Intuitiva:</strong> Automação em lote turbo, controle de temperatura Kelvin, vibração com proteção de pele, presets do Lightroom e relatórios detalhados em tempo real.</span>
             </div>
         </div>
 
